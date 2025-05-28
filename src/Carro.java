@@ -1,4 +1,5 @@
-public class Carro extends Veiculo{
+public class Carro extends Veiculo {
+
     private int numeroPortas;
 
     public int getNumeroPortas() {
@@ -19,5 +20,4 @@ public class Carro extends Veiculo{
     public void mover() {
         System.out.println("O carro está dirigindo.");
     }
-
 }

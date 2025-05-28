@@ -1,4 +1,6 @@
-public class Moto extends Veiculo{
+
+public class Moto extends Veiculo {
+
     private int cilindrada;
 
     public int getCilindrada() {

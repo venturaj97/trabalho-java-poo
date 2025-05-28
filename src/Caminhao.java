@@ -1,4 +1,5 @@
-public class Caminhao extends Veiculo{
+public class Caminhao extends Veiculo {
+
     private double capacidadeCarga;
 
     public double getCapacidadeCarga() {
@@ -19,5 +20,4 @@ public class Caminhao extends Veiculo{
     public void mover() {
         System.out.println("O caminhão está transportando carga.");
     }
-
 }
