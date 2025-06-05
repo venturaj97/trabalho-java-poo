@@ -4,7 +4,10 @@ public class Pessoa {
     private String nome;
     private int idade;
 
+<<<<<<< HEAD
     // Construtor
+=======
+>>>>>>> 696508b315c6c184eb088f49f5c09e9ded846a9f
     public Pessoa(String nome, int idade) {
         this.nome = nome;
         this.idade = idade;
@@ -25,6 +28,7 @@ public class Pessoa {
 
     @Override
     public boolean equals(Object obj) {
+<<<<<<< HEAD
         // 1. Verifica se é a mesma instância
         if (this == obj) {
             return true;
@@ -36,6 +40,15 @@ public class Pessoa {
         // 3. Converte o objeto para Pessoa
         Pessoa outraPessoa = (Pessoa) obj;
         // 4. Compara os atributos nome e idade
+=======
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Pessoa outraPessoa = (Pessoa) obj;
+>>>>>>> 696508b315c6c184eb088f49f5c09e9ded846a9f
         return idade == outraPessoa.idade && Objects.equals(nome, outraPessoa.nome);
     }
 
