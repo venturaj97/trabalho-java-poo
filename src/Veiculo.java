@@ -1,9 +1,14 @@
-
 public class Veiculo {
 
     private String marca;
     private String modelo;
-    private String ano;
+    private int ano;
+
+    public Veiculo(String marca, String modelo, int ano) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+    }
 
     public String getMarca() {
         return marca;
@@ -21,11 +26,11 @@ public class Veiculo {
         this.modelo = modelo;
     }
 
-    public String getAno() {
+    public int getAno() {
         return ano;
     }
 
-    public void setAno(String ano) {
+    public void setAno(int ano) {
         this.ano = ano;
     }
 
@@ -36,6 +41,6 @@ public class Veiculo {
     }
 
     public void mover() {
-        System.out.println("O veículo está em movimento");
+        System.out.println("O veiculo vai entrar em movimento.");
     }
 }

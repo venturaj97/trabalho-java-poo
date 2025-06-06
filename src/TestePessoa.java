@@ -1,35 +1,36 @@
 public class TestePessoa {
     public static void main(String[] args) {
-        Pessoa pessoaA = new Pessoa("Antonio Junior", 90);
-        Pessoa pessoaB = new Pessoa("Antonio Junior", 90);
-        Pessoa pessoaC = new Pessoa("João", 28);
+        //instâncias de Pessoa
+        Pessoa pessoa1 = new Pessoa("Antonio Junior", 90);
+        Pessoa pessoa2 = new Pessoa("João Victor", 28);
+        Pessoa pessoa3 = new Pessoa("Antonio Junior", 90);
 
-        System.out.println("--- Demonstração do método toString() ---");
-        System.out.println("Pessoa A: " + pessoaA);
-        System.out.println("Pessoa C: " + pessoaC);
+        System.out.println("## Testando o método toString():");
+        System.out.println("Pessoa 1: " + pessoa1.toString());
+        System.out.println("Pessoa 2: " + pessoa2);
+        System.out.println("Pessoa 3: " + pessoa3);
 
-        System.out.println("\n--- Demonstração do método equals() ---");
-        boolean A_eh_igual_B = pessoaA.equals(pessoaB);
-        System.out.println("Pessoa A é igual a Pessoa B? " + A_eh_igual_B); // true
+        System.out.println("\n## Testando o método equals():");
+        System.out.println("pessoa1.equals(pessoa2)" + pessoa1.equals(pessoa2));       // false
+        System.out.println("pessoa1.equals(pessoa3)" + pessoa1.equals(pessoa3));      // true
 
-        boolean A_eh_igual_C = pessoaA.equals(pessoaC);
-        System.out.println("Pessoa A é igual a Pessoa C? " + A_eh_igual_C); // false
 
-        System.out.println("\n--- Demonstração do método hashCode() ---");
-        int hashCodeA = pessoaA.hashCode();
-        int hashCodeB = pessoaB.hashCode();
-        int hashCodeC = pessoaC.hashCode();
+        System.out.println("\n## Testando o método hashCode():");
+        System.out.println("HashCode Pessoa 1: " + pessoa1.hashCode());
+        System.out.println("HashCode Pessoa 2: " + pessoa2.hashCode());
+        System.out.println("HashCode Pessoa 3: " + pessoa3.hashCode()); // Deve ser igual ao de pessoa1
 
-        System.out.println("HashCode de Pessoa A: " + hashCodeA);
-        System.out.println("HashCode de Pessoa B: " + hashCodeB);
-        System.out.println("HashCode de Pessoa C: " + hashCodeC);
-
-        if (A_eh_igual_B) {
-            System.out.println("Como Pessoa A é igual a Pessoa B, seus hashCodes são iguais? " + (hashCodeA == hashCodeB)); // true
+        if (pessoa1.equals(pessoa3)) {
+            System.out.println("\n## Testando o método hashCode() com equals():");
+            System.out.println("HashCode Pessoa 1: " + pessoa1.hashCode());
+            System.out.println("HashCode Pessoa 3: " + pessoa3.hashCode());
+            System.out.println("São iguais? " + (pessoa1.hashCode() == pessoa3.hashCode()));
         }
 
-        if (!A_eh_igual_C) {
-            System.out.println("Como Pessoa A é diferente de Pessoa C, seus hashCodes são diferentes? " + (hashCodeA != hashCodeC)); // Provavelmente true
+        if (!pessoa1.equals(pessoa2)) {
+            System.out.println("\nHashCode Pessoa 1: " + pessoa1.hashCode());
+            System.out.println("HashCode Pessoa 2: " + pessoa2.hashCode());
+            System.out.println("São iguais? " + (pessoa1.hashCode() == pessoa2.hashCode()));
         }
     }
 }
